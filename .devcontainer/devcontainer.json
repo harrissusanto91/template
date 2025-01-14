@@ -20,7 +20,10 @@
         "workbench.preferredDarkColorTheme": "GitHub Dark Default",
         "workbench.preferredLightColorTheme": "GitHub Light Default",
         "workbench.iconTheme": "vs-minimal",
-        "window.autoDetectColorScheme": true
+        "window.autoDetectColorScheme": true,
+        "files.exclude": {
+          ".devcontainer/": true
+        }
       }
     }
   },

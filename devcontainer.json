@@ -1,0 +1,41 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.autopep8",
+        "ms-python.python"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8"
+        },
+        "editor.renderWhitespace": "selection",
+        "editor.formatOnSave": false,
+        "editor.minimap.enabled": false,
+        "editor.quickSuggestions": {
+          "comments": "off",
+          "other": "off",
+          "strings": "off"
+        },
+        "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+        "workbench.preferredLightColorTheme": "GitHub Light Default",
+        "workbench.iconTheme": "vs-minimal",
+        "window.autoDetectColorScheme": true
+      }
+    }
+  },
+  "image": "ghcr.io/cs50/codespace:c5be161759c41c4609941ea6cfdeddeda44ae0ac",
+  "forwardPorts": [
+    5000,
+    8080,
+    8082,
+    8787
+  ],
+  "mounts": [
+    {
+      "source": "/var/run/docker.sock",
+      "target": "/var/run/docker-host.sock",
+      "type": "bind"
+    }
+  ]
+}

@@ -31,7 +31,5 @@
     8082,
     8787
   ],
-  "remoteEnv": {
-    "PS1": "$ "
-  }
+  "postStartCommand": "echo 'export PS1=\"$ \"' >> ~/.bashrc && echo 'export PS1=\"$ \"' >> ~/.zshrc"
 }

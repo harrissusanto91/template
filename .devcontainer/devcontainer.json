@@ -22,11 +22,11 @@
         "workbench.iconTheme": "vs-minimal",
         "window.autoDetectColorScheme": true,
         "files.exclude": {
-          ".devcontainer/": true
+          "README.md": true  // Hide README.md from the Explorer
         }
       }
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postStartCommand": "echo 'export PS1=\"$ \"' >> ~/.bashrc && echo 'export PS1=\"$ \"' >> ~/.zshrc && code /README.md"
+  "postStartCommand": "echo 'export PS1=\"$ \"' >> ~/.bashrc && echo 'export PS1=\"$ \"' >> ~/.zshrc && cat README.md"  // Show README.md content in the terminal
 }

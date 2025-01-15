@@ -29,5 +29,5 @@
     }  
   },  
   "image": "mcr.microsoft.com/devcontainers/python:3.11",  
-  "postStartCommand": "export PS1='\\u@\\h \\W \\$ '"  
+  "postStartCommand": "echo 'export PS1=\"\\u@\\h \\W \\$ \"' >> ~/.bash_profile && export PS1='\\u@\\h \\W \\$ '"  
 }

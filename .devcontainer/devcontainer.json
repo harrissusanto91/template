@@ -36,5 +36,5 @@
     }  
   },  
   "image": "mcr.microsoft.com/devcontainers/python:3.11",  
-  "postCreateCommand": "echo 'function set_prompt { repo_name=$(basename \"$PWD\"); if [[ \"$PWD\" == \"/workspaces/\$repo_name\" ]]; then PS1=\"\\\$ \"; else PS1=\"./\$(basename \"$PWD\")\\\$ \"; fi; }' >> ~/.bashrc && source ~/.bashrc"  
-}
+  "postCreateCommand": "echo 'function set_prompt { repo_name=$(basename \"$PWD\"); if [[ \"$PWD\" == \"/workspaces/\$repo_name\" ]]; then PS1=\"\$ \"; else PS1=\"\$(basename \"$PWD\$ \")\"; fi; }' >> ~/.bashrc && source ~/.bashrc"  
+}  

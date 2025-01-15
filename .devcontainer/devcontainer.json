@@ -28,6 +28,5 @@
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postStartCommand": "echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"$(basename $(pwd))$ \"; fi)\"' >> ~/.bashrc && echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"$(basename $(pwd))$ \"; fi)\"' >> ~/.zshrc"
+  "image": "mcr.microsoft.com/devcontainers/python:3.11"
 }

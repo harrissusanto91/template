@@ -30,8 +30,7 @@
             "path": "bash",  
             "args": ["-l"],  
             "env": {  
-              "PROMPT_DIRTRIM": "1",  
-              "PS1": "\\W \\$ "  // Display current directory and prompt  
+              "PROMPT_DIRTRIM": "1"  
             }  
           }  
         },  

@@ -30,5 +30,5 @@
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postStartCommand": "echo 'export PS1=\"$ \"' >> ~/.bashrc && echo 'export PS1=\"$ \"' >> ~/.zshrc && pip install -r /workspace/requirements.txt"
+  "postStartCommand": "echo 'export PS1=\"\\w$ \"' >> ~/.bashrc && echo 'export PS1=\"\\w$ \"' >> ~/.zshrc && pip install -r /workspace/requirements.txt"
 }

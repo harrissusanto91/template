@@ -25,10 +25,39 @@
         },
         "editor.parameterHints.enabled": false,
         "editor.hover.enabled": false,
-        "terminal.integrated.cwd": "~",
-        "terminal.integrated.defaultProfile.windows": "PowerShell",
-        "terminal.integrated.defaultProfile.osx": "Zsh",
-        "terminal.integrated.defaultProfile.linux": "Zsh"
+        "terminal.integrated.profiles.windows": {
+          "Short Paths": {
+            "path": ["C:/"],
+            "args": [
+              "-NoLogo",
+              "-Command",
+              "& { $Env:PROMPT_DIRTRIM = 2; Set-Location -Resolve; $ExecutionContext.SessionState.Path.CurrentLocation.ProviderPath }"
+            ]
+          }
+        },
+        "terminal.integrated.profiles.osx": {
+          "Short Paths": {
+            "path": ["/"],
+            "args": [
+              "-NoLogo",
+              "-Command",
+              "& { $Env:PROMPT_DIRTRIM = 2; Set-Location -Resolve; $ExecutionContext.SessionState.Path.CurrentLocation.ProviderPath }"
+            ]
+          }
+        },
+        "terminal.integrated.profiles.linux": {
+          "Short Paths": {
+            "path": ["/workspace"],
+            "args": [
+              "-NoLogo",
+              "-Command",
+              "& { $Env:PROMPT_DIRTRIM = 2; Set-Location -Resolve; $ExecutionContext.SessionState.Path.CurrentLocation.ProviderPath }"
+            ]
+          }
+        },
+        "terminal.integrated.defaultProfile.windows": "Short Paths",
+        "terminal.integrated.defaultProfile.osx": "Short Paths",
+        "terminal.integrated.defaultProfile.linux": "Short Paths"
       }
     }
   },

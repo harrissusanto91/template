@@ -25,13 +25,12 @@
         },
         "editor.parameterHints.enabled": false,
         "editor.hover.enabled": false,
+        "terminal.integrated.cwd": "~",
         "terminal.integrated.defaultProfile.windows": "PowerShell",
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "terminal.integrated.defaultProfile.osx": "zsh",
-        "terminal.integrated.showTabs": false,
-        "terminal.integrated.prompt": "${cwd}$"
+        "terminal.integrated.defaultProfile.osx": "Zsh",
+        "terminal.integrated.defaultProfile.linux": "Zsh"
       }
     }
   },
-  "image": "ghcr.io/devcontainers/base:linux"
+  "image": "mcr.microsoft.com/devcontainers/python:3.11"
 }

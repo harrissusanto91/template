@@ -29,5 +29,6 @@
     }  
   },  
   "image": "mcr.microsoft.com/devcontainers/python:3.11",  
-  "postCreateCommand": "echo 'PS1=\"$(if [[ \"$PWD\" == /workspaces* ]]; then echo \"${PWD#/workspaces} $ \"; else echo \"$PWD $ \"; fi)\"'"  
+  "postCreateCommand": "echo 'export PS1=\"\$(if [[ \\\"\\\$PWD\\\" == /workspaces* ]]; then echo \\\"\\\${PWD#/workspaces} \\$ \\\\\"; else echo \\\"\\\$PWD \\$ \\\\\"; fi)\"' >> ~/.bashrc",  
+  "postStartCommand": "source ~/.bashrc"  
 }

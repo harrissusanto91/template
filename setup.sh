@@ -1,7 +1,5 @@
 #!/bin/bash  
 
 # Customize the Bash prompt to show one directory after 'workspaces'  
-echo "PS1='\$(basename \$(pwd | sed -e \"s|^.*workspaces/||\")) \$ '" >> ~/.bashrc  
-
-# Apply changes  
-source ~/.bashrc  
+PS1='$(if [[ "$PWD" == /workspaces* ]]; then echo "${PWD#/workspaces} $ "; else echo "$PWD $ "; fi)'  
+echo "export PS1='$PS1'" >> ~/.bashrc  

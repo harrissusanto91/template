@@ -36,7 +36,7 @@
         "terminal.integrated.shellArgs.linux": ["-l"],
         "terminal.integrated.prompt": {
           "hidden": false,
-          "format": "% "
+          "format": "$ "
         }
       }
     }

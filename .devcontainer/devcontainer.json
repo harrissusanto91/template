@@ -2,14 +2,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.autopep8",
         "ms-python.python"
       ],
       "settings": {
-        "[python]": {
-          "editor.defaultFormatter": "ms-python.autopep8"
-        },
-        "editor.renderWhitespace": "selection",
+        "editor.renderWhitespace": "none",
         "editor.formatOnSave": false,
         "editor.minimap.enabled": false,
         "editor.quickSuggestions": {
@@ -17,18 +13,22 @@
           "other": "off",
           "strings": "off"
         },
-        "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-        "workbench.preferredLightColorTheme": "GitHub Light Default",
         "workbench.iconTheme": "vs-minimal",
         "window.autoDetectColorScheme": true,
         "files.exclude": {
-          ".devcontainer/": true
+          ".devcontainer/": true,
+          "**/.git": true,
+          "**/.vscode": true,
+          "**/.DS_Store": true
         },
         "editor.parameterHints.enabled": false,
-        "editor.hover.enabled": false
+        "editor.hover.enabled": false,
+        "files.autoSave": "onWindowChange",
+        "python.testing.pytestEnabled": true,
+        "python.testing.unittestEnabled": false
       }
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postStartCommand": "echo 'export PS1=\"$ \"' >> ~/.bashrc && echo 'export PS1=\"$ \"' >> ~/.zshrc"
+  "postStartCommand": "echo 'export PS1=\"$ \"' >> ~/.bashrc && echo 'export PS1=\"$ \"' >> ~/.zshrc && pip install -r /workspace/requirements.txt"
 }

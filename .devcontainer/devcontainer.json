@@ -1,40 +1,45 @@
-{  
-  "customizations": {  
-    "vscode": {  
-      "extensions": [  
-        "ms-python.autopep8",  
-        "ms-python.python"  
-      ],  
-      "settings": {  
-        "[python]": {  
-          "editor.defaultFormatter": "ms-python.autopep8"  
-        },  
-        "editor.renderWhitespace": "selection",  
-        "editor.formatOnSave": false,  
-        "editor.minimap.enabled": false,  
-        "editor.quickSuggestions": {  
-          "comments": "off",  
-          "other": "off",  
-          "strings": "off"  
-        },  
-        "workbench.preferredLightColorTheme": "GitHub Light Default",  
-        "workbench.iconTheme": "vs-minimal",  
-        "window.autoDetectColorScheme": true,  
-        "files.exclude": {  
-          ".devcontainer/": true  
-        },  
-        "editor.parameterHints.enabled": false,  
-        "editor.hover.enabled": false,  
-        "terminal.integrated.defaultProfile.linux": "bash",  
-        "terminal.integrated.profiles.linux": {  
-          "bash": {  
-            "path": "bash",  
-            "args": ["-l"]  
-          }  
-        }  
-      }  
-    }  
-  },  
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",  
-  "postCreateCommand": "echo 'function set_prompt { repo_name=$(basename \"$PWD\"); if [[ \"$PWD\" == \"/workspaces/\$repo_name\" ]]; then PS1=\"\$ \"; else PS1=\"\$(basename \"$PWD\$ \")\"; fi; }' >> ~/.bashrc && source ~/.bashrc"  
-}  
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.autopep8",
+        "ms-python.python"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8"
+        },
+        "editor.renderWhitespace": "selection",
+        "editor.formatOnSave": false,
+        "editor.minimap.enabled": false,
+        "editor.quickSuggestions": {
+          "comments": "off",
+          "other": "off",
+          "strings": "off"
+        },
+        "workbench.preferredLightColorTheme": "GitHub Light Default",
+        "workbench.iconTheme": "vs-minimal",
+        "window.autoDetectColorScheme": true,
+        "files.exclude": {
+          ".devcontainer/": true
+        },
+        "editor.parameterHints.enabled": false,
+        "editor.hover.enabled": false,
+        "terminal.integrated.profiles.windows": {},
+        "terminal.integrated.profiles.osx": {},
+        "terminal.integrated.profiles.linux": {},
+        "terminal.integrated.defaultProfile.windows": "Command Prompt",
+        "terminal.integrated.defaultProfile.osx": "Zsh",
+        "terminal.integrated.defaultProfile.linux": "Ubuntu",
+        "terminal.integrated.shellArgs.windows": [],
+        "terminal.integrated.shellArgs.osx": ["-l"],
+        "terminal.integrated.shellArgs.linux": ["-l"],
+        "terminal.integrated.prompt": {
+          "hidden": false,
+          "format": "% "
+        }
+      }
+    }
+  },
+  "image": "mcr.microsoft.com/devcontainers/python:3.11"
+}

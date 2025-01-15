@@ -31,5 +31,5 @@
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postStartCommand": "echo 'export PS1=\"$(basename $(pwd))$ \"' >> ~/.bashrc && echo 'export PS1=\"$(basename $(pwd))$ \"' >> ~/.zshrc && pip install -r /workspace/requirements.txt"
+  "postStartCommand": "echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/} \$ \"; fi)\"' >> ~/.bashrc && echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/} \$ \"; fi)\"' >> ~/.zshrc && pip install -r /workspace/requirements.txt"
 }

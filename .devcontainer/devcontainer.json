@@ -29,8 +29,6 @@
   },  
   "image": "mcr.microsoft.com/devcontainers/python:3.11",  
   "postStartCommand": [  
-    "echo 'export PS1=\"$ \"' >> ~/.bashrc",  
-    "echo 'export PS1=\"$ \"' >> ~/.zshrc",  
-    "cat README.md; echo; exec bash"  
+    "cat README.md; echo; export PS1=\"$ \""  
   ]  
 }  

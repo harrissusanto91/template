@@ -25,21 +25,16 @@
         },
         "editor.parameterHints.enabled": false,
         "editor.hover.enabled": false,
-        "terminal.integrated.profiles.windows": {},
-        "terminal.integrated.profiles.osx": {},
-        "terminal.integrated.profiles.linux": {},
-        "terminal.integrated.defaultProfile.windows": "Command Prompt",
-        "terminal.integrated.defaultProfile.osx": "Zsh",
-        "terminal.integrated.defaultProfile.linux": "Ubuntu",
-        "terminal.integrated.shellArgs.windows": [],
-        "terminal.integrated.shellArgs.osx": ["-l"],
-        "terminal.integrated.shellArgs.linux": ["-l"],
-        "terminal.integrated.prompt": {
-          "hidden": false,
-          "format": "$ "
+        "terminal.integrated.defaultProfile.windows": "PowerShell",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.defaultProfile.osx": "zsh",
+        "terminal.integrated.showTabs": false,
+        "terminal.integrated.commandToExecute": {
+          "linux": "pwd",
+          "osx": "pwd"
         }
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/python:3.11"
+  "image": "ghcr.io/devcontainers/base:linux"
 }

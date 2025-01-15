@@ -29,5 +29,5 @@
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "echo 'PS1=\"$(if [[ \"$PWD\" == /workspaces* ]]; then echo \"${PWD#/workspaces} $ \"; else echo \"$PWD $ \"; fi)\"' >> ~/.bashrc && source ~/.bashrc"
+"postCreateCommand": "echo 'PS1=\"$(if [[ \\\"$PWD\\\" == /workspaces* ]]; then echo \\\"${PWD#/workspaces} $ \\\"; else echo \\\"$PWD $ \\\"; fi)\"' >> ~/.bashrc && echo 'source ~/.bashrc' >> ~/.bash_profile"
 }

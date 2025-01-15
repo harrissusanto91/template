@@ -29,5 +29,5 @@
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "echo 'PS1=\"\\$(pwd | sed \"s|^$GITHUB_WORKSPACE|.|\" || echo \\$) \"' >> ~/.bashrc && source ~/.bashrc"
+  "postCreateCommand": "echo 'PS1=\"$(pwd | sed \\\"s|^${GITHUB_WORKSPACE}|.|\\\" || echo \\$) \"' >> ~/.bashrc && source ~/.bashrc"
 }

@@ -27,10 +27,11 @@
         "editor.hover.enabled": false,  
         "terminal.integrated.profiles.linux": {  
           "bash": {  
-            "path": "bash",  
+            "path": "bash",   
             "args": ["-l"],  
             "env": {  
-              "PROMPT_DIRTRIM": "1"  
+              "PROMPT_DIRTRIM": "1", // Enables directory trim  
+              "PS1": "\\W \\$ "       // Sets the prompt to show only the current directory  
             }  
           }  
         },  

@@ -1,43 +1,32 @@
-{  
-  "customizations": {  
-    "vscode": {  
-      "extensions": [  
-        "ms-python.autopep8",  
-        "ms-python.python"  
-      ],  
-      "settings": {  
-        "[python]": {  
-          "editor.defaultFormatter": "ms-python.autopep8"  
-        },  
-        "editor.renderWhitespace": "selection",  
-        "editor.formatOnSave": false,  
-        "editor.minimap.enabled": false,  
-        "editor.quickSuggestions": {  
-          "comments": "off",  
-          "other": "off",  
-          "strings": "off"  
-        },  
-        "workbench.preferredLightColorTheme": "GitHub Light Default",  
-        "workbench.iconTheme": "vs-minimal",  
-        "window.autoDetectColorScheme": true,  
-        "files.exclude": {  
-          ".devcontainer/": true  
-        },  
-        "editor.parameterHints.enabled": false,  
-        "editor.hover.enabled": false,  
-        "terminal.integrated.profiles.linux": {  
-          "bash": {  
-            "path": "bash",   
-            "args": ["-l"],  
-            "env": {  
-              "PROMPT_DIRTRIM": "1", // Enables directory trim  
-              "PS1": "\\W \\$ "       // Sets the prompt to show only the current directory  
-            }  
-          }  
-        },  
-        "terminal.integrated.defaultProfile.linux": "bash"  
-      }  
-    }  
-  },  
-  "image": "mcr.microsoft.com/devcontainers/python:3.11"  
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.autopep8",
+        "ms-python.python"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8"
+        },
+        "editor.renderWhitespace": "selection",
+        "editor.formatOnSave": false,
+        "editor.minimap.enabled": false,
+        "editor.quickSuggestions": {
+          "comments": "off",
+          "other": "off",
+          "strings": "off"
+        },
+        "workbench.preferredLightColorTheme": "GitHub Light Default",
+        "workbench.iconTheme": "vs-minimal",
+        "window.autoDetectColorScheme": true,
+        "files.exclude": {
+          ".devcontainer/": true
+        },
+        "editor.parameterHints.enabled": false,
+        "editor.hover.enabled": false
+      }
+    }
+  },
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
 }

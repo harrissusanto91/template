@@ -2,10 +2,14 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "ms-python.autopep8",
         "ms-python.python"
       ],
       "settings": {
-        "editor.renderWhitespace": "none",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8"
+        },
+        "editor.renderWhitespace": "selection",
         "editor.formatOnSave": false,
         "editor.minimap.enabled": false,
         "editor.quickSuggestions": {
@@ -13,23 +17,19 @@
           "other": "off",
           "strings": "off"
         },
+        "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+        "workbench.preferredLightColorTheme": "GitHub Light Default",
         "workbench.iconTheme": "vs-minimal",
         "window.autoDetectColorScheme": true,
         "files.exclude": {
           ".devcontainer/": true,
-          "**/.git": true,
-          "**/.vscode": true,
-          "**/.DS_Store": true,
           "**/README*": true
         },
         "editor.parameterHints.enabled": false,
-        "editor.hover.enabled": false,
-        "files.autoSave": "onWindowChange",
-        "python.testing.pytestEnabled": true,
-        "python.testing.unittestEnabled": false
+        "editor.hover.enabled": false
       }
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postStartCommand": "echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/} \$ \"; fi)\"' >> ~/.bashrc && echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/} \$ \"; fi)\"' >> ~/.zshrc && pip install -r /workspace/requirements.txt"
+  "postStartCommand": "echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/}\\w$ \"; fi)\"' >> ~/.bashrc && echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/}\\w$ \"; fi)\"' >> ~/.zshrc"
 }

@@ -28,4 +28,6 @@
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/python:
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postStartCommand": "export PS1='$(if [[ \"$PWD\" == /workspaces* ]]; then echo \"${PWD#/workspaces} $ \"; else echo \"$PWD $ \"; fi)'"
+}

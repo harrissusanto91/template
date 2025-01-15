@@ -29,5 +29,5 @@
     }  
   },  
   "image": "mcr.microsoft.com/devcontainers/python:3.11",  
-  "postCreateCommand": "./setup.sh"  
+  "postCreateCommand": "./.devcontainer/setup.sh"  
 }  

@@ -1,33 +1,33 @@
-{  
-  "customizations": {  
-    "vscode": {  
-      "extensions": [  
-        "ms-python.autopep8",  
-        "ms-python.python"  
-      ],  
-      "settings": {  
-        "[python]": {  
-          "editor.defaultFormatter": "ms-python.autopep8"  
-        },  
-        "editor.renderWhitespace": "selection",  
-        "editor.formatOnSave": false,  
-        "editor.minimap.enabled": false,  
-        "editor.quickSuggestions": {  
-          "comments": "off",  
-          "other": "off",  
-          "strings": "off"  
-        },  
-        "workbench.preferredLightColorTheme": "GitHub Light Default",  
-        "workbench.iconTheme": "vs-minimal",  
-        "window.autoDetectColorScheme": true,  
-        "files.exclude": {  
-          ".devcontainer/": true  
-        },  
-        "editor.parameterHints.enabled": false,  
-        "editor.hover.enabled": false  
-      }  
-    }  
-  },  
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",  
-  "postStartCommand": "echo 'export PS1=\"\\u@\\h \\W \\$ \"' >> ~/.bash_profile && export PS1='\\u@\\h \\W \\$ '"  
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.autopep8",
+        "ms-python.python"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.autopep8"
+        },
+        "editor.renderWhitespace": "selection",
+        "editor.formatOnSave": false,
+        "editor.minimap.enabled": false,
+        "editor.quickSuggestions": {
+          "comments": "off",
+          "other": "off",
+          "strings": "off"
+        },
+        "workbench.preferredLightColorTheme": "GitHub Light Default",
+        "workbench.iconTheme": "vs-minimal",
+        "window.autoDetectColorScheme": true,
+        "files.exclude": {
+          ".devcontainer/": true
+        },
+        "editor.parameterHints.enabled": false,
+        "editor.hover.enabled": false
+      }
+    }
+  },
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postStartCommand": "echo \"PS1='$(if [[ \\\"$PWD\\\" == /workspaces* ]]; then echo \\\"${PWD#/workspaces} \\\" $; else echo \\\"$PWD \\\" $; fi)'\" >> ~/.bashrc && source ~/.bashrc"
 }

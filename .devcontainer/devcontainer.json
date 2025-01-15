@@ -22,7 +22,8 @@
         "workbench.iconTheme": "vs-minimal",
         "window.autoDetectColorScheme": true,
         "files.exclude": {
-          "README.md": true  // Hide README.md from the Explorer
+          "README.md": true,         // Hide README.md from the Explorer
+          ".devcontainer": true      // Hide .devcontainer folder from the Explorer
         }
       }
     }

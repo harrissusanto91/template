@@ -31,6 +31,6 @@
   "postStartCommand": [  
     "echo 'export PS1=\"$ \"' >> ~/.bashrc",  
     "echo 'export PS1=\"$ \"' >> ~/.zshrc",  
-    "cat README.md; echo ' '; export PS1=\"$ \""  
+    "cat README.md; echo; exec bash"  
   ]  
-} 
+}  

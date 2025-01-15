@@ -17,7 +17,6 @@
           "other": "off",
           "strings": "off"
         },
-        "workbench.preferredDarkColorTheme": "GitHub Dark Default",
         "workbench.preferredLightColorTheme": "GitHub Light Default",
         "workbench.iconTheme": "vs-minimal",
         "window.autoDetectColorScheme": true,

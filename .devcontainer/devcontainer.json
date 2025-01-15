@@ -21,8 +21,7 @@
         "workbench.iconTheme": "vs-minimal",
         "window.autoDetectColorScheme": true,
         "files.exclude": {
-          ".devcontainer/": true,
-          "**/README*": true
+          ".devcontainer/": true
         },
         "editor.parameterHints.enabled": false,
         "editor.hover.enabled": false
@@ -30,5 +29,5 @@
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postStartCommand": "echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/}\\w$ \"; fi)\"' >> ~/.bashrc && echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"${PWD/$HOME/}\\w$ \"; fi)\"' >> ~/.zshrc"
+  "postStartCommand": "echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"$(basename $(pwd))$ \"; fi)\"' >> ~/.bashrc && echo 'export PS1=\"$(if [ $(pwd) = $HOME ]; then echo \"$ \"; else echo \"$(basename $(pwd))$ \"; fi)\"' >> ~/.zshrc"
 }

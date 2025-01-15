@@ -23,21 +23,12 @@
         "window.autoDetectColorScheme": true,
         "files.exclude": {
           ".devcontainer/": true
-        }
+        },
+        "editor.parameterHints.enabled": false,
+        "editor.hover.enabled": false
       }
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "forwardPorts": [
-    5000,
-    8080,
-    8082,
-    8787
-  ],
   "postStartCommand": "echo 'export PS1=\"$ \"' >> ~/.bashrc && echo 'export PS1=\"$ \"' >> ~/.zshrc"
 }
-
-Hi this is my devcontainer on github
-
-I want to add command to show the readme when you open codespace
-do not remove anything just add this fuction

@@ -29,10 +29,7 @@
         "terminal.integrated.defaultProfile.linux": "bash",
         "terminal.integrated.defaultProfile.osx": "zsh",
         "terminal.integrated.showTabs": false,
-        "terminal.integrated.commandToExecute": {
-          "linux": "pwd",
-          "osx": "pwd"
-        }
+        "terminal.integrated.prompt": "${cwd}$"
       }
     }
   },

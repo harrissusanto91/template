@@ -29,4 +29,5 @@
     }
   },
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postStartCommand": "echo \"PS1='$(if [[ \\\"$PWD\\\" == /workspaces* ]]; then echo \\\"${PWD#/workspaces}\\ $ \"; else echo \\\"$PWD\\ $ \"; fi)'\" >> ~/.bashrc && echo \"PS1='$(if [[ \\\"$PWD\\\" == /workspaces* ]]; then echo \\\"${PWD#/workspaces}\\ $ \"; else echo \\\"$PWD\\ $ \"; fi)'\" >> ~/.zshrc"
 }

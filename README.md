@@ -4,7 +4,9 @@ Steps to Submit:
 To submit your work, use the following commands in order:
 
 git add .
+
 git commit -m "Submit"
+
 git push origin main
 
 Reflection Questions:

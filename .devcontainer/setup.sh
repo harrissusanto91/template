@@ -1,16 +1,13 @@
 #!/bin/bash  
 
-# Customize the Bash prompt to show the current directory after 'workspaces/repositoryname'  
-PS1='$(if [[ "$PWD" == /workspaces/* ]]; then  
-          # Get relative path from /workspaces  
-          REL_PATH="${PWD#/workspaces/*/}"  
-          # If in the base directory (just /workspaces/repositoryname), show just $  
-          if [[ "$REL_PATH" == "" ]]; then  
-              echo "\$ "  
-          else  
-              # Otherwise, show the relative path  
-              echo "$REL_PATH$ "  
-          fi  
+# Customize the Bash prompt to show the current directory after 'workspaces/template'  
+PS1='$(if [[ "$PWD" == /workspaces/template ]]; then  
+          # If in the base default directory, show just $  
+          echo "\$ "  
+      elif [[ "$PWD" == /workspaces/template/* ]]; then  
+          # If in a subdirectory of /workspaces/template, show the relative path  
+          REL_PATH="${PWD#/workspaces/template/}"  
+          echo "$REL_PATH$ "  
       else  
           # Show the full path for other directories  
           echo "$PWD$ "  
@@ -20,4 +17,4 @@ PS1='$(if [[ "$PWD" == /workspaces/* ]]; then
 echo "export PS1='$PS1'" >> ~/.bashrc  
 
 # Optionally, you can source the .bashrc to apply changes immediately  
-source ~/.bashrc  
+source ~/.bashrc 
